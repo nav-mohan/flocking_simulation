@@ -79,5 +79,34 @@ function animate()
     requestAnimationFrame(animate);
 }
 
+document.getElementById("neighbor").oninput = (e) => 
+{
+    neighborDist = parseInt(e.target.value);
+    document.getElementById("neighborVal").innerText = neighborDist;
+};
+
+document.getElementById("separation").oninput = (e) => 
+{
+    separationDist = parseInt(e.target.value);
+    document.getElementById("separationVal").innerText = separationDist;
+};
+
+document.getElementById("align").oninput = (e) => 
+{
+    alignFactor = parseFloat(e.target.value);
+    document.getElementById("alignVal").innerText = alignFactor;
+};
+
+document.getElementById("cohesion").oninput = (e) => 
+{
+    cohesionFactor = parseFloat(e.target.value);
+    document.getElementById("cohesionVal").innerText = cohesionFactor;
+};
+
+document.getElementById("sepStrength").oninput = (e) => 
+{
+    separationFactor = parseFloat(e.target.value);
+    document.getElementById("sepStrengthVal").innerText = separationFactor;
+};
 
 animate();
